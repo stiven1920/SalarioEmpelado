@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
 
   regiter() {
     this.router.navigate(["/register"])
-    console.log("mateo es perra")
   }
 
 }

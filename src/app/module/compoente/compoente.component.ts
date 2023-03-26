@@ -35,7 +35,7 @@ export class CompoenteComponent implements OnInit {
       if (categoria <= 5) { // tiene la obligacion de poner 5 como categoria o si no lo manda al else
         if (categoria === 1 && horasExtras > 40) {// pone el tipo de categoria y las horas extras mayor a 40
           elExtra = 1800;
-          sueldo = (sueldo * 0.25) + sueldo; // calcula la multiplicacion y se lo suma al sueldo
+          sueldo = (elExtra * 0.25) + sueldo; // calcula la multiplicacion y se lo suma al sueldo
         } else if (categoria === 2 && horasExtras > 40) {
           elExtra = 12000;
           sueldo = (elExtra * 0.25) + sueldo;
@@ -48,9 +48,7 @@ export class CompoenteComponent implements OnInit {
         } else if (categoria === 2 && horasExtras > 40) {
           elExtra = 32000;
           sueldo = (elExtra * 0.25) + sueldo;
-        } else {
-          sueldo = sueldo + (sueldo)
-        }
+        } 
       } else {
         console.log('no hay categorias mayores a 5');
       }

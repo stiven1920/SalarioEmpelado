@@ -26,13 +26,15 @@ export class RegistroComponent implements OnInit {
   }
 
 
-  onSubmit(formularioPersona: any) {
+  onSubmit(formularioPersona: { nomber1: string; nomber2: string; apellido: string; contrasena: string; }) {
     let per: Persona = new Persona();
     per.nomber1 = formularioPersona.nomber1;
     per.nomber2 = formularioPersona.nomber2;
     per.apellido = formularioPersona.apellido;
     per.contrasena = formularioPersona.contrasena;
     this.personaService.savePersonas(per);
+    this.router.navigate([""])
+    console.log(formularioPersona)
   }
 
 }

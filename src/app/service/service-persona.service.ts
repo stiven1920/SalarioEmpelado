@@ -6,13 +6,13 @@ import { Persona } from '../models/persona';
 })
 export class ServicePersonaService {
 
-  listPersonas: Persona[] =[]
+  listPersonas: Persona[] = []
 
   constructor() {
-    this.listPersonas = JSON.parse(localStorage.getItem("persona"));
+    this.listPersonas = JSON.parse(localStorage.getItem("persona") as string);
   }
 
-  savePersonas(persona :Persona){
+  savePersonas(persona: Persona) {
     this.listPersonas.push(persona);
     localStorage.setItem("persona", JSON.stringify(this.listPersonas));
   }
