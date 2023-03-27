@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-compoente',
@@ -11,7 +10,7 @@ export class CompoenteComponent implements OnInit {
 
   fromularioComponente;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(private formBuilder: FormBuilder) {
     this.fromularioComponente = this.formBuilder.group({
       nombre: '',
       apellido: '',

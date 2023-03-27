@@ -1,6 +1,6 @@
 export class Persona {
-  public nomber1!: string;
-  public nomber2!: string;
+  public nombre1!: string;
+  public nombre2!: string;
   public apellido!: string;
   public contrasena!: string;
 }
